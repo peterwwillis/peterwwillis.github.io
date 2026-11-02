@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Peter Willis — CV</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1 id="peter-willis-curriculum-vitae">Peter Willis — Curriculum
+Vitae</h1>
+<p><strong>Senior DevOps Engineer</strong></p>
+<p>Walton, NY (hybrid in NY area, or remote) · resume@mutable.cc ·
+linkedin.com/in/peterwwillis · github.com/peterwwillis</p>
+<blockquote>
+<p>Master CV — comprehensive record of all experience, projects, and
+skills.</p>
+</blockquote>
+<hr />
+<h2 id="professional-summary">Professional Summary</h2>
+<p>Senior DevOps and Platform Engineer with 20+ years across systems
+administration, SRE, DevOps, and platform engineering on AWS and Google
+Cloud. Ships self-service developer platforms, infrastructure-as-code
+standards, and AI-driven automation that cut lead time, cloud spend, and
+operational risk for enterprise teams. Career spans hospitality,
+medical, media, defense-adjacent, and technology industries, split
+across operations, software engineering, and security analysis for
+large-scale online businesses. Open-source contributor (Terraform,
+Packer, GitLab, BusyBox, ProGit); advocate for security, reliability,
+and Deming-style continuous improvement. Experience leading teams,
+authoring org-wide RFCs, onboarding acquisitions, and mentoring
+engineers.</p>
+<h2 id="core-competencies">Core Competencies</h2>
+<ul>
+<li><strong>Cloud Platforms:</strong> AWS, Google Cloud (GCP)</li>
+<li><strong>Infrastructure as Code:</strong> Terraform, Terragrunt,
+Packer, Ansible, Puppet, CfEngine</li>
+<li><strong>CI/CD &amp; GitOps:</strong> GitHub Actions, CircleCI,
+Jenkins, Drone</li>
+<li><strong>Containers &amp; Orchestration:</strong> Kubernetes,
+OpenShift, Docker, Helm, ECS, DC/OS, Mesos/Marathon</li>
+<li><strong>Languages:</strong> Python, Bash, Go, Perl, C, SQL, Java,
+XML, HTML, CSS</li>
+<li><strong>Observability &amp; Monitoring:</strong> DataDog, NewRelic,
+Splunk, Prometheus, Grafana, Ganglia, Cacti</li>
+<li><strong>Security &amp; Compliance:</strong> AWS SSO, OAuth2/OIDC,
+Vault, NIST SP 800-171, CMMC v2, DFARS-7020, NMAP, Snort, Wireshark,
+OpenSSL, SSL/TLS, Symantec DLP, Websense, SAINT Manager</li>
+<li><strong>Databases &amp; Messaging:</strong> PostgreSQL,
+MySQL/MariaDB, Redis, MongoDB, DynamoDB, RabbitMQ, Riak, Zookeeper,
+GraphDB, ElasticSearch</li>
+<li><strong>Networking &amp; Protocols:</strong> TCP/IP, HTTP, REST,
+Cisco IOS, all common network protocols</li>
+<li><strong>Operating Systems &amp; Virtualization:</strong> Linux,
+Windows, BSD, Solaris, KVM, VMware, Vagrant, OpenStack, Xen</li>
+<li><strong>Dev Workflow &amp; Collaboration:</strong> Git, JIRA,
+Confluence, Slack, Teams, Linear, ZenHub, GitHub Flow, Scrum, Kanban,
+Scrumban, Agile, Lean, Cisco SDLC</li>
+<li><strong>Leadership:</strong> Team lead (5 engineers), long-term
+roadmap planning, standups &amp; refinements, RFC authorship,
+mentorship, cross-team enablement, acquisition onboarding,
+vendor/account management</li>
+</ul>
+<!-- CONFIRMED HISTORY FACTS (Peter, 2026-11-02; sources: old-resume extracts + email check):
+  1. Staffing agencies: the FINRA job (Dec 2010 - Feb 2012) was on contract with Pencom;
+     the UMMS job (May - Nov 2012) was on contract with Haymaker. Pencom came before Haymaker.
+  2. Elsevier engagement: ~6-month contract-to-hire via Motion Recruitment (work performed at
+     the Elsevier office in Philadelphia, PA), converted to full-time Elsevier on Monday,
+     June 10, 2019. Motion contract: Feb - Jun 2019. Elsevier full-time: Jun 2019 - Jun 2022.
+  3. Locations: Motion contract = Philadelphia, PA (Elsevier office); NextEra Mobility = Remote;
+     Outside Inc. = Remote.
+-->
+<h2 id="professional-experience">Professional Experience</h2>
+<h3 id="outside-inc.-senior-devops-engineer-aug-2024-present">Outside
+Inc. — Senior DevOps Engineer · Aug 2024 – Present</h3>
+<p>Maintained the team’s long-term roadmap, ran standups and
+refinements, and partnered with 6 product teams supporting 50 services
+across 18 AWS accounts.</p>
+<ul>
+<li>Built an automated Terraform repository where deployments re-use DRY
+modules; users own their own infrastructure through CODEOWNERS grants in
+a hierarchical tree; GitHub Actions gate merges based on successful plan
+runs scoped to the actual affected code/modules/deployments to reduce
+scope of change and number of runs; users apply Terraform by commenting
+in the PR, and apply only runs if they are a CODEOWNERS maintainer for
+that specific deployed infra. End result: DRY Terraform, users own their
+own infra, and can run plan/apply remotely with no local setup and no
+extra AWS permissions.</li>
+<li>Cut infrastructure lead time from 2 weeks to 2 days by building DRY
+Terraform modules for developers to roll out new services/infrastructure
+using only config-file changes (no coding).</li>
+<li>Created deployment pipelines for automated Terraform drift-detection
+and continuous integration of infrastructure-as-code with open-source
+tools and GitHub Actions; catches undocumented changes weekly across 18
+accounts, 100+ repos, and thousands of resources, saving untold hours of
+manual redeployment work.</li>
+<li>Built AI-assisted but deterministic solutions for teams to analyze
+EC2 &amp; RDS usage, identify instances to right-size, evaluate results,
+approve right-sizing, create tickets for teams, and select Reserved
+Instances after right-sizing for maximum savings.</li>
+<li>Right-sized RDS and picked standard instance families for best use
+of reserved-instance credits, driving an estimated 35% AWS cost
+reduction.</li>
+<li>Triaged and closed several hundred security holes in AWS
+infrastructure; migrated 100+ human IAM users across 18 AWS accounts
+(with varying history and permissions/use-cases) to AWS SSO, mitigating
+decades-old static access keys from being used in attacks, simplifying
+permissions (from a hodge-podge of random grants to 3 standardized
+roles), enabling more secure onboarding/offboarding, and letting users
+switch accounts easily in the console.</li>
+<li>Built a DevOps Slack bot automating common user requests: opening
+tickets, executing DevOps automated jobs (Terraform, Packer), and
+initiating whole automated headless AI coding sessions (e.g., to
+scaffold new Terraform deployments based on standards) and automated AI
+investigation of incidents using configured skills and tools. Runs in
+the cloud with Slack modals for ease of use and continuous feedback
+(checks status and updates the user on progress, even on triggered
+GitHub Actions).</li>
+<li>Drove 5x more tickets closed per cycle by introducing an
+“aitask”-labeled Linear workflow: a script detects labeled tickets and
+fires off headless AI coding sessions (read-only SaaS access, read/write
+to files in Git) to attempt a pass at the work; the team reviews PRs and
+applies the result.</li>
+<li>Built automation tools to inventory and update the CMDB, IMDB, and
+NMDB based on live data from AWS and on-prem resources, helping detect
+drift, document the system, and save time diagnosing/updating/fixing
+software and infra while reducing manual errors.</li>
+<li>Developed a plan to rapidly lift-and-shift a vulnerable large-scale
+business-critical on-prem legacy platform to AWS; executed the migration
+of ~12 servers and 2 PB of data over ~1 year, reducing risk and
+improving reliability, security, and performance (including GPU offload
+for AI/ML workloads).</li>
+<li>Onboarded 5 new acquisitions, migrating/updating legacy
+infrastructure to modern best practices (~2 dozen VMs, storage, EKS
+clusters) over ~18 months, including some on-prem moves to AWS.</li>
+<li>Wrote and implemented RFCs for new standard engineering practices in
+security and CI/CD automation: Git commit signing with 1Password, AWS
+SSO CLI tools, and developer security analysis tools. All adopted.</li>
+<li>Planned the DevOps team’s long-term roadmap, led standups &amp;
+refinements, and supported developers’ needs by customizing Terraform
+modules and building new infrastructure tailored to their
+applications.</li>
+</ul>
+<p><strong>Tech:</strong> AWS · EKS · Terraform · Packer · GitHub
+Actions · AWS SSO · Python · Slack API · Linear API · Helm · RDS · EC2 ·
+S3</p>
+<h3
+id="nextera-mobility-principal-devops-engineer-jun-2022-jul-2024">NextEra
+Mobility — Principal DevOps Engineer · Jun 2022 – Jul 2024</h3>
+<p>Architected and operated the Google Cloud application platform
+powering a 30-microservice product.</p>
+<ul>
+<li>Created a standardized workflow for the new Platform group using
+Jira automation.</li>
+<li>Architected a Google Cloud application platform for improved
+security of apps and developer access.</li>
+<li>Created IaC in Terraform with CI/CD pipelines to allow devs to
+change, deploy, and maintain infra easily.</li>
+<li>Created a platform to automate deployment and rollback with CircleCI
+and custom scripts.</li>
+<li>Cut CI build times 10x, eliminated intermittent failures, and
+improved security posture by replacing a homegrown Python package
+repository with Google Cloud Artifacts.</li>
+<li>Improved deploy reliability, minimized build time, and improved
+caching by replacing a custom VPN with self-hosted CircleCI.</li>
+<li>DRY-ed 80+ repos’ CircleCI configs/jobs into one shared library
+(CircleCI Orb) to improve security and speed up builds.</li>
+<li>Implemented continuous deployment with custom Helm charts on GKE for
+a 30-microservice product to facilitate easier deploy and rollback;
+migrated products from old to new infrastructure without downtime using
+IaC.</li>
+<li>Automated DNS &amp; TLS management with cert-manager and
+external-dns Kubernetes projects.</li>
+<li>Centralized and automated DNS by migrating from GoDaddy to Google
+Cloud DNS, managed in Terraform.</li>
+<li>Eliminated shared application credentials, added privilege
+separation and least privilege; improved security by replacing user
+service accounts with regular GCP user accounts.</li>
+<li>Triaged and rotated exposed credentials during a major vendor
+security compromise (CircleCI).</li>
+<li>Automated onboarding to reduce toil and eliminate persistent errors
+via GitOps (Git/CircleCI) and ChatOps (Opsdroid).</li>
+<li>Implemented cloud-based development in DevSpace/K8s to remove
+persistent environment/network issues from docker-compose on
+laptops.</li>
+<li>Researched and implemented a new secure environment for government
+contracts requiring DFARS-7020, NIST SP 800-171, CMMC v2, etc., to
+handle CUI; partitioned a copy of the existing product environment into
+a DOD-secure environment in two months, supporting devs and business
+users with private-cloud remote desktops.</li>
+<li>Supported product teams with technical issues, helping developers
+troubleshoot bugs, adapt new technology, and design architecture with
+cloud best practices.</li>
+<li>Developed custom solutions for SaaS vendors’ missing API features in
+Python and Bash.</li>
+<li>Documented the DevOps practice, employee onboarding, product
+architecture, vendor/account management, and runbooks for toil; created
+onboarding and production-support runbooks for developers, business
+users, and the platform team.</li>
+</ul>
+<p><strong>Tech:</strong> Google Cloud (GCP) · GKE · Terraform ·
+CircleCI · Helm · DevSpace · external-dns · cert-manager · Opsdroid ·
+Python · Bash · Cloud DNS · Cloud Artifacts</p>
+<h3
+id="elsevier-inc.-remote-senior-systems-engineer-jun-2019-jun-2022">Elsevier,
+Inc. (Remote) — Senior Systems Engineer · Jun 2019 – Jun 2022</h3>
+<p>Worked on multiple embedded agile teams, as well as a tiger team
+across multiple products. Oversaw integration of new acquisition into
+company engineering standards, and led team of 5 DevOps engineers.
+Maintained infrastructure-as-code across 5 product families and over
+1,000 AWS accounts. Joined via a contract-to-hire engagement through
+Motion Recruitment, converted to full-time in June 2019.</p>
+<ul>
+<li>Built solutions for multiple teams and products to support Developer
+and Enterprise needs.</li>
+<li>Provided cloud architecture guidance to developers to meet product
+goals; built the resulting infrastructure as code using Terraform,
+Packer, Ansible, and Jenkins.</li>
+<li>Used Terragrunt to manage Terraform across multiple environments;
+its difficulty keeping configurations DRY and its command workflow not
+fitting our use cases led me to design terraformsh (see Projects) — a
+Terraform wrapper implementing a new way of structuring files and
+running Terraform.</li>
+<li>Led the DevOps Engineer Team in integrating a new acquisition
+(fastest in business-unit history) into the company S&amp;P; migrated
+AWS accounts, closed security holes, containerized legacy apps, and
+adapted the team’s legacy SDLC to use Artifactory, SonarQube, Checkmarx,
+and Contrast.</li>
+<li>Organized cross-team communication channels and documentation hubs
+for the technology group; wrote user/onboarding guides and
+runbooks.</li>
+<li>Automated ETL pipelines and a custom SFTP gateway.</li>
+<li>Migrated a live high-traffic production site from a legacy vendor to
+an entirely custom automated ETL pipeline with a custom-built SFTP
+gateway in two months, with zero downtime. Managed microservices,
+MariaDB, SFTP, and web-app infrastructure in AWS protected by
+CloudFlare.</li>
+<li>Wrote Python and Bash tools to manage multiple environments in IaC
+monorepos, automating tasks and calling NewRelic APIs to supplant
+missing Terraform provider support.</li>
+<li>Maintained on-call incident response and wrote runbooks for
+production infrastructure; debugged production Java and Python services
+in ECS and OpenShift.</li>
+<li>Designed and implemented new CI and on-call continuous-improvement
+practices.</li>
+<li>Won 3 company awards for excellence of individual and team
+engineering achievements.</li>
+</ul>
+<p><strong>Tech:</strong> AWS · Terraform · Packer · Ansible · Jenkins ·
+ECS · OpenShift · Docker · Artifactory · SonarQube · Checkmarx ·
+Contrast · CloudFlare · Java · Python · Bash · NewRelic</p>
+<h3
+id="motion-recruitment-partners-contract-to-elsevier-inc.-elsevier-office-philadelphia-pa-devops-engineer-contract-to-hire-converted-to-elsevier-feb-2019-jun-2019">Motion
+Recruitment Partners, contract to Elsevier, Inc. (Elsevier office,
+Philadelphia, PA) — DevOps Engineer, contract-to-hire converted to
+Elsevier · Feb 2019 – Jun 2019</h3>
+<ul>
+<li>Implemented disposable AWS ECS clusters using Terraform and Jenkins
+to build/test/destroy one environment per GitHub Pull Request for faster
+isolated development/testing. Increased development velocity of the
+squad by 5x.</li>
+</ul>
+<p><strong>Tech:</strong> AWS · ECS · Terraform · Jenkins · GitHub</p>
+<h3
+id="intepros-consulting-plymouth-meeting-pa-contract-to-comcast-corporation-philadelphia-pa-site-reliability-engineer-aug-2017-aug-2018">IntePros
+Consulting (Plymouth Meeting, PA), contract to Comcast Corporation
+(Philadelphia, PA) — Site Reliability Engineer · Aug 2017 – Aug
+2018</h3>
+<ul>
+<li>Authored new SRE procedures to unify incident response.</li>
+<li>Added automation that changed deployment from every two weeks to
+every day.</li>
+<li>Introduced monthly process reviews leading to faster stand-ups,
+blocker resolution, and timeboxed prioritized work.</li>
+<li>Reduced on-call page-outs up to 6x by converting operational
+runbooks into autohealing processes orchestrated via Jenkins.</li>
+<li>Responded on-call to incidents and wrote post-mortems for production
+issues with services used by 50M Comcast customers.</li>
+<li>Shrank tech debt by implementing version-controlled containerized
+deployments; automated secrets rotation and implemented per-user key
+management.</li>
+<li>Managed large distributed decentralized Riak clusters on OpenStack
+and AWS with declarative Ansible playbooks for a large-scale internal
+service to support all Comcast customers.</li>
+<li>Contributed composable, reusable Python automation tools for
+autohealing and maintenance on 20% time.</li>
+</ul>
+<p><strong>Tech:</strong> AWS · OpenStack · Ansible · Docker · Jenkins ·
+Kubernetes · Mesos/Marathon · DC/OS · OpenShift · Riak · Consul · Vault
+· Confluence · GitHub Enterprise · JIRA · ZenHub · Python</p>
+<h3
+id="cisco-systems-inc.-columbia-md-automation-engineer-iii-software-engineer-iii-jan-2013-sep-2016">Cisco
+Systems, Inc. (Columbia, MD) — Automation Engineer III / Software
+Engineer III · Jan 2013 – Sep 2016</h3>
+<ul>
+<li>Built an end-to-end automated test framework for continuous network
+appliance testing in Perl and C; delivered test features for QA to
+implement as a matrix of end-to-end feature tests across multiple
+product lines.</li>
+<li>Delivered test features for QA to implement complex feature-testing
+solutions across multiple product lines.</li>
+<li>Wrote drivers for the QualiSystems CloudShell automation framework,
+used by tests to safely share physical test infrastructure across
+multiple product teams.</li>
+<li>Standardized builds using reproducible infrastructure-as-code with
+CI/CD and configuration management tools; reimplemented the build
+process with Ansible, Docker, Jenkins, and Puppet.</li>
+<li>Overhauled the mission-critical performance test suite (Ixia
+BreakingPoint) for core product lines.</li>
+<li>Collaborated on both an automation development team and a DevOps
+support team; transitioned from the automation dev team into a DevOps
+support role.</li>
+</ul>
+<p><strong>Tech:</strong> Ansible · Docker · Jenkins · Puppet · Cisco
+Nexus · Ixia BreakingPoint · QualiSystems CloudShell · Matshell · Perl ·
+C · Python</p>
+<h3
+id="haymaker-technologies-inc.-contract-to-university-of-maryland-medical-system-columbia-md-information-security-analyst-may-2012-nov-2012">Haymaker
+Technologies, Inc., contract to University of Maryland Medical System
+(Columbia, MD) — Information Security Analyst · May 2012 – Nov 2012</h3>
+<ul>
+<li>Implemented convergent network security log analysis and
+vulnerability scanning and reporting.</li>
+<li>Developed tools to scan, identify, and report on site-wide SSL/TLS
+network service issues.</li>
+<li>Customized search alerts fed by a variety of platform log
+sources.</li>
+<li>Wrote documentation and reports on a variety of security
+issues.</li>
+<li>Worked with multiple teams to plan and implement an SSL-inspecting
+proxy to upgrade an older solution.</li>
+</ul>
+<p><strong>Tech:</strong> Splunk · SAINT Manager · NMap · OpenSSL ·
+SSL/TLS · Symantec DLP · Websense · Cisco · Juniper · Ansible · Perl</p>
+<h3
+id="pencom-systems-inc.-contract-to-finra-rockville-md-shared-services-engineer-dec-2010-feb-2012">Pencom
+Systems, Inc., contract to FINRA (Rockville, MD) — Shared Services
+Engineer · Dec 2010 – Feb 2012</h3>
+<ul>
+<li>Supported middleware applications for web application
+developers.</li>
+<li>Established standards for technology used from development to
+production.</li>
+<li>Developed tools to gauge realistic system resource estimates on
+multiple operating systems.</li>
+<li>Planned, documented, and executed multiple upgrades of an IAM
+solution and dependent components.</li>
+<li>Managed web frameworks and developed tools to assist in
+administration and migration.</li>
+<li>Assisted in the migration of applications on legacy platforms to new
+systems in several new datacenters.</li>
+</ul>
+<p><strong>Tech:</strong> Oracle WebLogic · RSA Access Manager ·
+SpringSource · Perl · SSL/TLS</p>
+<h3
+id="cbs-interactive-fort-lauderdale-fl-systems-administrator-may-2006-sep-2010">CBS
+Interactive (Fort Lauderdale, FL) — Systems Administrator · May 2006 –
+Sep 2010</h3>
+<ul>
+<li>Implemented fail-over functionality for multiple network
+services.</li>
+<li>Worked with developers to isolate and patch bugs in system libraries
+and web apps.</li>
+<li>Tracked issues on a web-scale server farm, supporting developers and
+users of internal services.</li>
+<li>Investigated network and system performance issues on high-traffic
+production websites.</li>
+<li>Maintained web platforms and DNS, packaged Linux software (RPM), and
+tuned web servers.</li>
+<li>Developed software for monitoring, configuration, and deployment of
+infrastructure and network services.</li>
+<li>Assisted a fire-fighting team for peak-traffic days to monitor
+servers and squash issues before they brought down the site.</li>
+</ul>
+<p><strong>Tech:</strong> Apache · Ganglia · ISC DHCPD · Perl · Python ·
+RPM · Kickstart · Ant · JWS · Tomcat · CfEngine · Puppet · OpenLDAP</p>
+<h3
+id="mako-surgical-corp.-fort-lauderdale-fl-systems-administrator-jan-2005-jan-2006">MAKO
+Surgical Corp. (Fort Lauderdale, FL) — Systems Administrator · Jan 2005
+– Jan 2006</h3>
+<ul>
+<li>Maintained all network services, storage, and printers.</li>
+<li>Worked with software developers and mechanical engineers to find
+solutions for technical issues.</li>
+<li>Provided desktop and mobile device support for Windows and Linux
+users.</li>
+<li>Implemented a custom incremental encrypted off-site backup
+solution.</li>
+<li>Maintained the corporate website, supported remote VPN, and
+maintained the T1 connection and PBX.</li>
+<li>Worked with QA to document and verify IT procedures and software
+used for regulatory certification.</li>
+</ul>
+<p><strong>Tech:</strong> Active Directory · Apache · Bugzilla · Cisco ·
+CommuniGate Pro · CVS · ISC BIND · MS Office · NetApp</p>
+<h3 id="early-career-hospitality-industry-2001-2005">Early Career —
+Hospitality Industry (2001 – 2005)</h3>
+<blockquote>
+<p><strong>Not included in generated resumes</strong> unless explicitly
+requested/opted in.</p>
+</blockquote>
+<p><strong>Windstone Development Intl. LLC — Network Administrator · Jan
+2003 – Jan 2005</strong> - General IT problem-solving for a network of
+clients and servers. - Built a custom app to merge mail labels for large
+print jobs. - Linux domain controller administration. - Wrote custom web
+scrapers to collect data for direct marketing.</p>
+<p><strong>Comtech Administration Inc. — Perl Developer and Consultant ·
+Jan 2003 – Jan 2005</strong> - Developed OO Perl modules for a
+site-management CGI application. - Built forensic network security
+applications.</p>
+<p><strong>Windrose Hotel Group LLC — Network Administrator · Jan 2001 –
+Dec 2002</strong> - Provided networked file access, domain logon,
+web/mail serving, remote access, disk backup, network monitoring, and
+mail administration. - Ran a Linux domain controller with Windows
+clients.</p>
+<h2 id="open-source-projects">Open Source &amp; Projects</h2>
+<ul>
+<li><strong>Terraformsh</strong> (Feb 2021 – Present) — Wrapper for
+Terraform providing DRY configurations and workflow automation. Built
+after Terragrunt proved too difficult to keep DRY and easy to use while
+at Elsevier — terraformsh implements a different way of structuring
+Terraform files and running Terraform.
+github.com/pwillis-els/terraformsh · Design philosophy:
+github.com/pwillis-els/terraformsh/blob/main/PHILOSOPHY.md (link format
+pending: consider GitHub short link or GitHub Pages)</li>
+<li><strong>Network Inventory Lookup Assistant</strong> (Dec 2011 –
+Present) — Open-source networking utility.
+github.com/psypete/public-bin</li>
+<li><strong>EtherDump</strong> (May 2004 – Present) — Open-source
+networking utility. github.com/psypete/public-bin</li>
+<li><strong>Open-source contributions</strong> — BusyBox, ProGit, slpkg,
+GitLab, Packer, Terraform.</li>
+<li><strong>GitHub</strong> — github.com/peterwwillis (canonical) ·
+github.com/pwillis-els</li>
+</ul>
+<h2 id="certifications-training">Certifications &amp; Training</h2>
+<ul>
+<li><strong>CompTIA Network+</strong> — CompTIA</li>
+<li>Training toward <strong>CCNA, CCDA, MCSE</strong></li>
+<li>Knowledge primarily self-taught, supplemented by on-the-job training
+and security and programming conferences</li>
+</ul>
+<h2 id="education">Education</h2>
+<ul>
+<li><strong>General Equivalency Diploma (GED)</strong> — Florida, Nov
+2001 (received GED to finish school early and immediately begin working
+in the industry)</li>
+</ul>
+<h2 id="employment-timeline">Employment Timeline</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Period</th>
+<th>Role</th>
+<th>Employer</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aug 2024 – Present</td>
+<td>Senior DevOps Engineer</td>
+<td>Outside Inc.</td>
+<td>Remote</td>
+</tr>
+<tr>
+<td>Jun 2022 – Jul 2024</td>
+<td>Principal DevOps Engineer</td>
+<td>NextEra Mobility</td>
+<td>Remote</td>
+</tr>
+<tr>
+<td>Jun 2019 – Jun 2022</td>
+<td>Senior Systems Engineer</td>
+<td>Elsevier, Inc.</td>
+<td>Remote</td>
+</tr>
+<tr>
+<td>Feb 2019 – Jun 2019</td>
+<td>DevOps Engineer (contract)</td>
+<td>Motion Recruitment → Elsevier</td>
+<td>Philadelphia, PA (Elsevier office)</td>
+</tr>
+<tr>
+<td>Aug 2017 – Aug 2018</td>
+<td>Site Reliability Engineer (contract)</td>
+<td>IntePros → Comcast</td>
+<td>Philadelphia, PA</td>
+</tr>
+<tr>
+<td>Oct 2016 – Jul 2017</td>
+<td>—</td>
+<td>Unemployed</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Jan 2013 – Sep 2016</td>
+<td>Automation Engineer III</td>
+<td>Cisco Systems (Sourcefire)</td>
+<td>Columbia, MD</td>
+</tr>
+<tr>
+<td>May 2012 – Nov 2012</td>
+<td>Information Security Analyst (contract)</td>
+<td>Haymaker → UMMS</td>
+<td>Columbia, MD</td>
+</tr>
+<tr>
+<td>Dec 2010 – Feb 2012</td>
+<td>Shared Services Engineer</td>
+<td>Pencom → FINRA</td>
+<td>Rockville, MD</td>
+</tr>
+<tr>
+<td>May 2006 – Sep 2010</td>
+<td>Systems Administrator</td>
+<td>CBS Interactive</td>
+<td>Fort Lauderdale, FL</td>
+</tr>
+<tr>
+<td>Jan 2005 – Jan 2006</td>
+<td>Systems Administrator</td>
+<td>MAKO Surgical Corp.</td>
+<td>Fort Lauderdale, FL</td>
+</tr>
+<tr>
+<td>Jan 2003 – Jan 2005</td>
+<td>Network Administrator</td>
+<td>Windstone Development Intl. LLC</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Jan 2003 – Jan 2005</td>
+<td>Perl Developer and Consultant</td>
+<td>Comtech Administration Inc.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Jan 2001 – Dec 2002</td>
+<td>Network Administrator</td>
+<td>Windrose Hotel Group LLC</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
