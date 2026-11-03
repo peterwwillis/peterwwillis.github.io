@@ -30,10 +30,6 @@ Vitae</h1>
 <p><strong>Senior DevOps Engineer</strong></p>
 <p>Walton, NY (hybrid in NY area, or remote) · resume@mutable.cc ·
 linkedin.com/in/peterwwillis · github.com/peterwwillis</p>
-<blockquote>
-<p>Master CV — comprehensive record of all experience, projects, and
-skills.</p>
-</blockquote>
 <hr />
 <h2 id="professional-summary">Professional Summary</h2>
 <p>Senior DevOps and Platform Engineer with 20+ years across systems
@@ -95,30 +91,22 @@ Inc. — Senior DevOps Engineer · Aug 2024 – Present</h3>
 refinements, and partnered with 6 product teams supporting 50 services
 across 18 AWS accounts.</p>
 <ul>
-<li>Built an automated Terraform repository where deployments re-use DRY
-modules; users own their own infrastructure through CODEOWNERS grants in
-a hierarchical tree; GitHub Actions gate merges based on successful plan
-runs scoped to the actual affected code/modules/deployments to reduce
-scope of change and number of runs; users apply Terraform by commenting
-in the PR, and apply only runs if they are a CODEOWNERS maintainer for
-that specific deployed infra. End result: DRY Terraform, users own their
-own infra, and can run plan/apply remotely with no local setup and no
-extra AWS permissions.</li>
-<li>Cut infrastructure lead time from 2 weeks to 2 days by building DRY
-Terraform modules for developers to roll out new services/infrastructure
-using only config-file changes (no coding).</li>
+<li>Built a self-service Terraform platform from DRY modules where users
+own their infrastructure via CODEOWNERS grants in a hierarchical tree;
+GitHub Actions gate merges on plan runs scoped to the affected
+code/modules/deployments, and users apply by PR comment (maintainers
+only) with no local setup or extra AWS permissions, cutting
+infrastructure lead time from 2 weeks to 2 days.</li>
 <li>Created deployment pipelines for automated Terraform drift-detection
 and continuous integration of infrastructure-as-code with open-source
 tools and GitHub Actions; catches undocumented changes weekly across 18
 accounts, 100+ repos, and thousands of resources, saving untold hours of
 manual redeployment work.</li>
-<li>Built AI-assisted but deterministic solutions for teams to analyze
-EC2 &amp; RDS usage, identify instances to right-size, evaluate results,
-approve right-sizing, create tickets for teams, and select Reserved
-Instances after right-sizing for maximum savings.</li>
-<li>Right-sized RDS and picked standard instance families for best use
-of reserved-instance credits, driving an estimated 35% AWS cost
-reduction.</li>
+<li>Built AI-assisted but deterministic tooling that analyzes EC2 &amp;
+RDS usage, proposes right-sizing, routes approvals through team tickets,
+and selects Reserved Instances afterward; right-sized RDS onto standard
+instance families for best use of RI credits, driving an estimated 35%
+AWS cost reduction.</li>
 <li>Triaged and closed several hundred security holes in AWS
 infrastructure; migrated 100+ human IAM users across 18 AWS accounts
 (with varying history and permissions/use-cases) to AWS SSO, mitigating
@@ -128,20 +116,18 @@ roles), enabling more secure onboarding/offboarding, and letting users
 switch accounts easily in the console.</li>
 <li>Built a DevOps Slack bot automating common user requests: opening
 tickets, executing DevOps automated jobs (Terraform, Packer), and
-initiating whole automated headless AI coding sessions (e.g., to
-scaffold new Terraform deployments based on standards) and automated AI
-investigation of incidents using configured skills and tools. Runs in
-the cloud with Slack modals for ease of use and continuous feedback
-(checks status and updates the user on progress, even on triggered
-GitHub Actions).</li>
+kicking off headless AI coding sessions and AI incident investigations
+using configured skills and tools. Runs in the cloud with Slack modals
+for ease of use and continuous feedback (checks status and updates the
+user on progress, even on triggered GitHub Actions).</li>
 <li>Drove 5x more tickets closed per cycle by introducing an
 “aitask”-labeled Linear workflow: a script detects labeled tickets and
 fires off headless AI coding sessions (read-only SaaS access, read/write
 to files in Git) to attempt a pass at the work; the team reviews PRs and
 applies the result.</li>
 <li>Built automation tools to inventory and update the CMDB, IMDB, and
-NMDB based on live data from AWS and on-prem resources, helping detect
-drift, document the system, and save time diagnosing/updating/fixing
+NMDB based on live data from AWS and on-prem resources, keeping
+documentation current, and saving time diagnosing/updating/fixing
 software and infra while reducing manual errors.</li>
 <li>Developed a plan to rapidly lift-and-shift a vulnerable large-scale
 business-critical on-prem legacy platform to AWS; executed the migration
@@ -150,14 +136,14 @@ improving reliability, security, and performance (including GPU offload
 for AI/ML workloads).</li>
 <li>Onboarded 5 new acquisitions, migrating/updating legacy
 infrastructure to modern best practices (~2 dozen VMs, storage, EKS
-clusters) over ~18 months, including some on-prem moves to AWS.</li>
+clusters) over ~18 months, including some datacenter-to-AWS moves.</li>
 <li>Wrote and implemented RFCs for new standard engineering practices in
 security and CI/CD automation: Git commit signing with 1Password, AWS
 SSO CLI tools, and developer security analysis tools. All adopted.</li>
-<li>Planned the DevOps team’s long-term roadmap, led standups &amp;
-refinements, and supported developers’ needs by customizing Terraform
-modules and building new infrastructure tailored to their
-applications.</li>
+<li>Administered EKS cluster serving a large-scale web &amp; mobile
+product.</li>
+<li>Supported developers by customizing Terraform modules and building
+new infrastructure tailored to their applications.</li>
 </ul>
 <p><strong>Tech:</strong> AWS · EKS · Terraform · Packer · GitHub
 Actions · AWS SSO · Python · Slack API · Linear API · Helm · RDS · EC2 ·
@@ -166,16 +152,13 @@ S3</p>
 id="nextera-mobility-principal-devops-engineer-jun-2022-jul-2024">NextEra
 Mobility — Principal DevOps Engineer · Jun 2022 – Jul 2024</h3>
 <p>Architected and operated the Google Cloud application platform
-powering a 30-microservice product.</p>
+powering a 30-microservice product, with hardened app and developer
+access.</p>
 <ul>
 <li>Created a standardized workflow for the new Platform group using
 Jira automation.</li>
-<li>Architected a Google Cloud application platform for improved
-security of apps and developer access.</li>
 <li>Created IaC in Terraform with CI/CD pipelines to allow devs to
 change, deploy, and maintain infra easily.</li>
-<li>Created a platform to automate deployment and rollback with CircleCI
-and custom scripts.</li>
 <li>Cut CI build times 10x, eliminated intermittent failures, and
 improved security posture by replacing a homegrown Python package
 repository with Google Cloud Artifacts.</li>
@@ -183,17 +166,17 @@ repository with Google Cloud Artifacts.</li>
 caching by replacing a custom VPN with self-hosted CircleCI.</li>
 <li>DRY-ed 80+ repos’ CircleCI configs/jobs into one shared library
 (CircleCI Orb) to improve security and speed up builds.</li>
-<li>Implemented continuous deployment with custom Helm charts on GKE for
-a 30-microservice product to facilitate easier deploy and rollback;
-migrated products from old to new infrastructure without downtime using
-IaC.</li>
+<li>Implemented continuous deployment with custom Helm charts on GKE
+driven by CircleCI and custom scripts, automating deploy and rollback
+for a 30-microservice product; migrated products from old to new
+infrastructure without downtime using IaC.</li>
 <li>Automated DNS &amp; TLS management with cert-manager and
 external-dns Kubernetes projects.</li>
-<li>Centralized and automated DNS by migrating from GoDaddy to Google
-Cloud DNS, managed in Terraform.</li>
-<li>Eliminated shared application credentials, added privilege
-separation and least privilege; improved security by replacing user
-service accounts with regular GCP user accounts.</li>
+<li>Centralized DNS by migrating from GoDaddy to Google Cloud DNS,
+managed in Terraform.</li>
+<li>Eliminated shared application credentials by replacing user service
+accounts with regular GCP user accounts, adding privilege separation and
+least privilege.</li>
 <li>Triaged and rotated exposed credentials during a major vendor
 security compromise (CircleCI).</li>
 <li>Automated onboarding to reduce toil and eliminate persistent errors
@@ -229,16 +212,12 @@ Maintained infrastructure-as-code across 5 product families and over
 1,000 AWS accounts. Joined via a contract-to-hire engagement through
 Motion Recruitment, converted to full-time in June 2019.</p>
 <ul>
-<li>Built solutions for multiple teams and products to support Developer
-and Enterprise needs.</li>
 <li>Provided cloud architecture guidance to developers to meet product
 goals; built the resulting infrastructure as code using Terraform,
 Packer, Ansible, and Jenkins.</li>
 <li>Used Terragrunt to manage Terraform across multiple environments;
 its difficulty keeping configurations DRY and its command workflow not
-fitting our use cases led me to design terraformsh (see Projects) — a
-Terraform wrapper implementing a new way of structuring files and
-running Terraform.</li>
+fitting our use cases led me to design terraformsh (see Projects).</li>
 <li>Led the DevOps Engineer Team in integrating a new acquisition
 (fastest in business-unit history) into the company S&amp;P; migrated
 AWS accounts, closed security holes, containerized legacy apps, and
@@ -247,7 +226,6 @@ and Contrast.</li>
 <li>Organized cross-team communication channels and documentation hubs
 for the technology group; wrote user/onboarding guides and
 runbooks.</li>
-<li>Automated ETL pipelines and a custom SFTP gateway.</li>
 <li>Migrated a live high-traffic production site from a legacy vendor to
 an entirely custom automated ETL pipeline with a custom-built SFTP
 gateway in two months, with zero downtime. Managed microservices,
@@ -259,8 +237,8 @@ missing Terraform provider support.</li>
 <li>Maintained on-call incident response and wrote runbooks for
 production infrastructure; debugged production Java and Python services
 in ECS and OpenShift.</li>
-<li>Designed and implemented new CI and on-call continuous-improvement
-practices.</li>
+<li>Designed and implemented new continuous-improvement practices for CI
+and production support.</li>
 <li>Won 3 company awards for excellence of individual and team
 engineering achievements.</li>
 </ul>
@@ -285,23 +263,25 @@ Consulting (Plymouth Meeting, PA), contract to Comcast Corporation
 (Philadelphia, PA) — Site Reliability Engineer · Aug 2017 – Aug
 2018</h3>
 <ul>
-<li>Authored new SRE procedures to unify incident response.</li>
+<li>Authored new SRE procedures to unify incident response across
+teams.</li>
 <li>Added automation that changed deployment from every two weeks to
 every day.</li>
 <li>Introduced monthly process reviews leading to faster stand-ups,
 blocker resolution, and timeboxed prioritized work.</li>
 <li>Reduced on-call page-outs up to 6x by converting operational
-runbooks into autohealing processes orchestrated via Jenkins.</li>
-<li>Responded on-call to incidents and wrote post-mortems for production
-issues with services used by 50M Comcast customers.</li>
+runbooks into autohealing processes orchestrated via Jenkins,
+contributing composable, reusable Python automation tools for
+autohealing and maintenance on 20% time.</li>
+<li>Responded 24/7 on-call to production incidents and wrote
+post-mortems for services used by 50M Comcast customers; troubleshot
+large-scale distributed systems under load.</li>
 <li>Shrank tech debt by implementing version-controlled containerized
 deployments; automated secrets rotation and implemented per-user key
 management.</li>
 <li>Managed large distributed decentralized Riak clusters on OpenStack
 and AWS with declarative Ansible playbooks for a large-scale internal
 service to support all Comcast customers.</li>
-<li>Contributed composable, reusable Python automation tools for
-autohealing and maintenance on 20% time.</li>
 </ul>
 <p><strong>Tech:</strong> AWS · OpenStack · Ansible · Docker · Jenkins ·
 Kubernetes · Mesos/Marathon · DC/OS · OpenShift · Riak · Consul · Vault
@@ -315,14 +295,12 @@ Engineer III · Jan 2013 – Sep 2016</h3>
 appliance testing in Perl and C; delivered test features for QA to
 implement as a matrix of end-to-end feature tests across multiple
 product lines.</li>
-<li>Delivered test features for QA to implement complex feature-testing
-solutions across multiple product lines.</li>
 <li>Wrote drivers for the QualiSystems CloudShell automation framework,
 used by tests to safely share physical test infrastructure across
 multiple product teams.</li>
-<li>Standardized builds using reproducible infrastructure-as-code with
-CI/CD and configuration management tools; reimplemented the build
-process with Ansible, Docker, Jenkins, and Puppet.</li>
+<li>Reimplemented the build process as reproducible
+infrastructure-as-code with CI/CD and configuration management (Ansible,
+Docker, Jenkins, Puppet).</li>
 <li>Overhauled the mission-critical performance test suite (Ixia
 BreakingPoint) for core product lines.</li>
 <li>Collaborated on both an automation development team and a DevOps
@@ -363,10 +341,9 @@ production.</li>
 multiple operating systems.</li>
 <li>Planned, documented, and executed multiple upgrades of an IAM
 solution and dependent components.</li>
-<li>Managed web frameworks and developed tools to assist in
-administration and migration.</li>
-<li>Assisted in the migration of applications on legacy platforms to new
-systems in several new datacenters.</li>
+<li>Managed web frameworks and built admin/migration tooling; migrated
+applications off legacy platforms onto new systems in several new
+datacenters.</li>
 </ul>
 <p><strong>Tech:</strong> Oracle WebLogic · RSA Access Manager ·
 SpringSource · Perl · SSL/TLS</p>
@@ -375,20 +352,25 @@ id="cbs-interactive-fort-lauderdale-fl-systems-administrator-may-2006-sep-2010">
 Interactive (Fort Lauderdale, FL) — Systems Administrator · May 2006 –
 Sep 2010</h3>
 <ul>
-<li>Implemented fail-over functionality for multiple network
-services.</li>
-<li>Worked with developers to isolate and patch bugs in system libraries
-and web apps.</li>
-<li>Tracked issues on a web-scale server farm, supporting developers and
-users of internal services.</li>
-<li>Investigated network and system performance issues on high-traffic
-production websites.</li>
-<li>Maintained web platforms and DNS, packaged Linux software (RPM), and
-tuned web servers.</li>
+<li>Administered 2000+ bare-metal hosts in colo, supporting developers
+and internal services for high-traffic consumer websites.</li>
+<li>Troubleshot and fixed production Linux incidents during peak traffic
+across a web-scale server farm; served on a fire-fighting team for
+peak-traffic days, with on-call rotation covering long weekends for peak
+traffic and sports seasons.</li>
+<li>Maintained the internal Linux distribution, created thousands of
+RedHat packages; maintained web platforms and DNS; tuned web
+servers.</li>
+<li>Built a custom solution to scale an internal monitoring platform to
+thousands of nodes and millions of stats.</li>
 <li>Developed software for monitoring, configuration, and deployment of
-infrastructure and network services.</li>
-<li>Assisted a fire-fighting team for peak-traffic days to monitor
-servers and squash issues before they brought down the site.</li>
+infrastructure and network services; migrated configuration management
+from CfEngine to Puppet.</li>
+<li>Investigated network and system performance issues on high-traffic
+production websites; worked with developers to isolate and patch bugs in
+system libraries and web apps.</li>
+<li>Implemented high-availability failover for DHCP, DNS, and web
+services.</li>
 </ul>
 <p><strong>Tech:</strong> Apache · Ganglia · ISC DHCPD · Perl · Python ·
 RPM · Kickstart · Ant · JWS · Tomcat · CfEngine · Puppet · OpenLDAP</p>
@@ -441,13 +423,18 @@ Terraform files and running Terraform.
 github.com/pwillis-els/terraformsh · Design philosophy:
 github.com/pwillis-els/terraformsh/blob/main/PHILOSOPHY.md (link format
 pending: consider GitHub short link or GitHub Pages)</li>
-<li><strong>Network Inventory Lookup Assistant</strong> (Dec 2011 –
-Present) — Open-source networking utility.
-github.com/psypete/public-bin</li>
-<li><strong>EtherDump</strong> (May 2004 – Present) — Open-source
-networking utility. github.com/psypete/public-bin</li>
-<li><strong>Open-source contributions</strong> — BusyBox, ProGit, slpkg,
-GitLab, Packer, Terraform.</li>
+<li><strong>Network Inventory Lookup Assistant</strong> (Dec 2011) —
+Open-source networking utility. github.com/psypete/public-bin</li>
+<li><strong>EtherDump</strong> (May 2004) — Open-source networking
+utility. github.com/psypete/public-bin</li>
+<li><strong>PlumpOS</strong> (Mar 2003) — CD-bootable embedded Linux
+distribution for openMosix clusters.
+https://lwn.net/Articles/27528/</li>
+<li><strong>Open-source contributions</strong> — Bug fixes, features,
+and docs for BusyBox, ProGit, slpkg, GitLab, Packer, Terraform, many
+more.</li>
+<li><strong>Linux packaging</strong> — Thousands of packages
+built/maintained for Gentoo, Slackware, Alpine, Debian, RedHat.</li>
 <li><strong>GitHub</strong> — github.com/peterwwillis (canonical) ·
 github.com/pwillis-els</li>
 </ul>
